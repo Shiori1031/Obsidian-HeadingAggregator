@@ -1,0 +1,270 @@
+/* Heading Aggregator Plugin Styles */
+
+/* 错误和状态消息 */
+.heading-agg-error {
+    color: var(--text-error);
+    padding: 10px;
+    background-color: var(--background-modifier-error);
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+.heading-agg-loading {
+    color: var(--text-muted);
+    padding: 10px;
+    font-style: italic;
+}
+
+.heading-agg-empty {
+    color: var(--text-muted);
+    padding: 10px;
+    font-style: italic;
+}
+
+/* 匹配标题样式 */
+.heading-agg-matched-heading {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.9em;
+    margin-left: 8px;
+}
+
+/* ========== 列表格式样式 ========== */
+.heading-agg-list {
+    width: 100%;
+}
+
+.heading-agg-list-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border-left: 4px solid var(--interactive-accent);
+}
+
+.heading-agg-list-item:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+.heading-agg-item-header {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.heading-agg-file-link {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.heading-agg-file-link:hover {
+    color: var(--link-color-hover);
+    text-decoration: underline;
+}
+
+.heading-agg-item-content {
+    padding-left: 10px;
+    color: var(--text-normal);
+}
+
+.heading-agg-item-content p {
+    margin: 0.5em 0;
+}
+
+.heading-agg-item-content ul,
+.heading-agg-item-content ol {
+    margin: 0.5em 0;
+    padding-left: 1.5em;
+}
+
+/* ========== 表格格式样式 ========== */
+.heading-agg-table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    margin: 10px 0;
+    /* 添加滚动条样式 */
+    scrollbar-width: thin;
+}
+
+.heading-agg-table::-webkit-scrollbar {
+    height: 8px;
+}
+
+.heading-agg-table::-webkit-scrollbar-track {
+    background: var(--background-secondary);
+    border-radius: 4px;
+}
+
+.heading-agg-table::-webkit-scrollbar-thumb {
+    background: var(--background-modifier-border);
+    border-radius: 4px;
+}
+
+.heading-agg-table::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+.heading-agg-table-view {
+    width: 100%;
+    min-width: 600px; /* 设置最小宽度，确保表格不会过度压缩 */
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 0.9em; /* 稍微缩小字体以适应更多内容 */
+    table-layout: auto; /* 自动调整列宽 */
+}
+
+.heading-agg-table-view thead {
+    background-color: var(--background-secondary);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.heading-agg-table-view th {
+    padding: 8px 10px; /* 减少内边距使表格更紧凑 */
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.95em;
+    border-bottom: 2px solid var(--background-modifier-border);
+    color: var(--text-normal);
+    white-space: nowrap; /* 表头不换行 */
+}
+
+.heading-agg-table-view td {
+    padding: 8px 10px; /* 减少内边距 */
+    border-bottom: 1px solid var(--background-modifier-border);
+    vertical-align: top;
+    max-width: 500px; /* 限制最大宽度，防止内容过长 */
+}
+
+.heading-agg-table-view tbody tr:hover {
+    background-color: var(--table-row-background-hover);
+}
+
+.heading-agg-table-file {
+    width: 25%;
+    min-width: 150px;
+    font-weight: 500;
+}
+
+.heading-agg-table-heading {
+    width: 15%;
+    min-width: 100px;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.heading-agg-table-content {
+    width: 60%;
+}
+
+.heading-agg-table-content p {
+    margin: 0.3em 0; /* 减少段落间距 */
+    font-size: 0.95em;
+}
+
+.heading-agg-table-content ul,
+.heading-agg-table-content ol {
+    margin: 0.3em 0;
+    padding-left: 1.2em; /* 减少列表缩进 */
+}
+
+.heading-agg-table-content li {
+    margin: 0.2em 0;
+}
+
+.heading-agg-table-content code {
+    font-size: 0.85em;
+    padding: 1px 3px;
+}
+
+.heading-agg-table-content pre {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+/* 针对小屏幕优化 */
+@media (max-width: 1024px) {
+    .heading-agg-table-view {
+        min-width: 500px;
+        font-size: 0.85em;
+    }
+    
+    .heading-agg-table-file {
+        min-width: 100px;
+    }
+    
+    .heading-agg-table-content {
+        min-width: 250px;
+    }
+}
+
+/* ========== Markdown 格式样式 ========== */
+.heading-agg-markdown {
+    width: 100%;
+}
+
+.heading-agg-markdown-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--background-modifier-border);
+    color: var(--text-normal);
+}
+
+.heading-agg-markdown-title a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.heading-agg-markdown-title a:hover {
+    color: var(--link-color-hover);
+    text-decoration: underline;
+}
+
+.heading-agg-markdown-content {
+    padding: 10px 0;
+    color: var(--text-normal);
+}
+
+.heading-agg-markdown-content p {
+    margin: 0.8em 0;
+}
+
+.heading-agg-markdown-content ul,
+.heading-agg-markdown-content ol {
+    margin: 0.8em 0;
+    padding-left: 2em;
+}
+
+.heading-agg-separator {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+/* ========== 响应式设计 ========== */
+@media (max-width: 768px) {
+    .heading-agg-table-file {
+        width: 30%;
+        min-width: 100px;
+    }
+    
+    .heading-agg-table-content {
+        width: 70%;
+    }
+    
+    .heading-agg-list-item {
+        padding: 10px;
+    }
+}
+
+/* ========== 深色/浅色主题适配 ========== */
+.theme-dark .heading-agg-list-item {
+    background-color: var(--background-secondary);
+}
+
+.theme-light .heading-agg-list-item {
+    background-color: var(--background-primary-alt);
+}

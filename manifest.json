@@ -1,0 +1,10 @@
+{
+  "id": "heading-aggregator",
+  "name": "Heading Aggregator",
+  "version": "1.2.1",
+  "minAppVersion": "0.13.11",
+  "description": "聚合并展示所有文件中指定标题下的内容，支持多标题搜索和部分匹配",
+  "author": "Shiori",
+  "authorUrl": "https://github.com/Shiori1031",
+  "isDesktopOnly": false
+}
